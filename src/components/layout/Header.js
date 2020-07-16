@@ -86,7 +86,7 @@ const Header = ({
             bottomDivider && 'has-bottom-divider'
           )}>
           <Logo />
-          {!hideNav &&
+          {/* {!hideNav &&
             <>
               <button
                 ref={hamburger}
@@ -122,10 +122,10 @@ const Header = ({
                       <li>
                         <Link to="#0" className="button button-primary button-wide-mobile button-sm" onClick={closeMenu}>Sign up</Link>
                       </li>
-                    </ul>}
-                </div>
+                    </ul>} */}
+                {/* </div>
               </nav>
-            </>}
+            </>} */}
         </div>
       </div>
     </header>

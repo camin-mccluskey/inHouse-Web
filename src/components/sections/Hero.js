@@ -5,6 +5,7 @@ import ButtonGroup from '../elements/ButtonGroup';
 import Button from '../elements/Button';
 import Image from '../elements/Image';
 import Modal from '../elements/Modal';
+import MobileStoreButton from 'react-mobile-store-button';
 
 const propTypes = {
   ...SectionProps.types
@@ -61,27 +62,38 @@ const Hero = ({
         <div className={innerClasses}>
           <div className="hero-content">
             <h1 className="mt-0 mb-16 reveal-from-bottom" data-reveal-delay="200">
-              Landing template for <span className="text-color-primary">startups</span>
+              Harmonious house sharing with <span className="text-color-primary">inHouse</span>
             </h1>
             <div className="container-xs">
               <p className="m-0 mb-32 reveal-from-bottom" data-reveal-delay="400">
-                Our landing page template works on all devices, so you only have to set it up once, and get beautiful results forever.
-                </p>
+                Shared living can be tough. From bugging your housemates for rent, to working out who paid what after a night out.
+                We think shared living should be easy - that's why we made inHouse.
+              </p>
               <div className="reveal-from-bottom" data-reveal-delay="600">
                 <ButtonGroup>
-                  <Button tag="a" color="primary" wideMobile href="https://cruip.com/">
-                    Get started
-                    </Button>
-                  <Button tag="a" color="dark" wideMobile href="https://github.com/cruip/open-react-template/">
-                    View on Github
-                    </Button>
+                  <MobileStoreButton
+                    store="ios"
+                    width={200}
+                    height={100}
+                    url={"https://apps.apple.com/gb/app/inhouse/id1488409238?mt=8"}
+                    linkProps={{ title: 'iOS Store Button' }}
+                  />
+                  <div style={{paddingTop: 30}}>
+                  <MobileStoreButton
+                    store="android"
+                    width={200}
+                    height={140}
+                    url={"https://play.google.com/store/apps/details?id=io.inhouseapp.inhouse&hl=en_GB"}
+                    linkProps={{ title: 'Google Play Store Button' }}
+                  />
+                  </div>
                 </ButtonGroup>
               </div>
             </div>
           </div>
           <div className="hero-figure reveal-from-bottom illustration-element-01" data-reveal-value="20px" data-reveal-delay="800">
             <a
-              data-video="https://player.vimeo.com/video/174002812"
+              data-video="https://player.vimeo.com/video/438740646"
               href="#0"
               aria-controls="video-modal"
               onClick={openModal}
@@ -98,7 +110,7 @@ const Hero = ({
             id="video-modal"
             show={videoModalActive}
             handleClose={closeModal}
-            video="https://player.vimeo.com/video/174002812"
+            video="https://player.vimeo.com/video/438740646"
             videoTag="iframe" />
         </div>
       </div>
