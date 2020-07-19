@@ -1,8 +1,8 @@
 {
-  "name": "inhouse-website",
+  "name": "inhouse-web",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://camin-mccluskey.github.io/inHouse-Web",
+  "homepage": "https://camin-mccluskey.github.io/inhouse-web",
   "dependencies": {
     "classnames": "^2.2.6",
     "lodash": "^4.17.15",
@@ -16,7 +16,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git@github.com:camin-mccluskey/inHouse-Web.git"
+    "url": "git@github.com:camin-mccluskey/inhouse-web.git"
   },
   "scripts": {
     "start": "react-scripts start",
