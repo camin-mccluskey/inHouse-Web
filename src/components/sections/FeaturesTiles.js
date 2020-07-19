@@ -45,7 +45,7 @@ const FeaturesTiles = ({
 
   const sectionHeader = {
     title: 'Features',
-    paragraph: 'inHouse addresses the common problems with housesharing and we\'re building more great features all the time.'
+    paragraph: 'inHouse addresses the common problems with house sharing and we\'re building more great features all the time.'
   };
 
   return (
