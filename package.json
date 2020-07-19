@@ -2,7 +2,7 @@
   "name": "inhouse-website",
   "version": "0.1.0",
   "private": true,
-  "homepage": "http://camin-mccluskey.github.io/inHouse-Web",
+  "homepage": "https://camin-mccluskey.github.io/inHouse-Web",
   "dependencies": {
     "classnames": "^2.2.6",
     "lodash": "^4.17.15",
