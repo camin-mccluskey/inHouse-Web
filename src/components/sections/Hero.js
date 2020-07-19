@@ -69,24 +69,26 @@ const Hero = ({
                 Shared living can be tough. From bugging your housemates for rent, to working out who paid what after a night out.
                 We think shared living should be easy - that's why we made inHouse.
               </p>
-              <div className="reveal-from-bottom" data-reveal-delay="600">
+              <div className="reveal-from-bottom" data-reveal-delay="600" >
                 <ButtonGroup>
-                  <MobileStoreButton
-                    store="ios"
-                    width={200}
-                    height={100}
-                    url={"https://apps.apple.com/gb/app/inhouse/id1488409238?mt=8"}
-                    linkProps={{ title: 'iOS Store Button' }}
-                  />
-                  <div style={{paddingTop: 30}}>
-                  <MobileStoreButton
-                    store="android"
-                    width={200}
-                    height={140}
-                    url={"https://play.google.com/store/apps/details?id=io.inhouseapp.inhouse&hl=en_GB"}
-                    linkProps={{ title: 'Google Play Store Button' }}
-                  />
-                  </div>
+                  <a href="https://apps.apple.com/gb/app/inhouse/id1488409238?mt=8">
+                    <Image
+                      className="has-shadow"
+                      src={require('./../../assets/images/app-store-download.svg')}
+                      width={180}
+                      height={80}
+                      style={{marginRight: 10}}
+                    />
+                  </a>
+                  <a href="https://play.google.com/store/apps/details?id=io.inhouseapp.inhouse&hl=en_GB">
+                    <Image
+                      className="has-shadow"
+                      src={require('./../../assets/images/google-play-download.svg')}
+                      width={180}
+                      height={80}
+                      style={{marginLeft: 10}}
+                    />
+                  </a>
                 </ButtonGroup>
               </div>
             </div>
