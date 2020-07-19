@@ -1,8 +1,9 @@
-import React from 'react';
+import React, { useState }from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import { SectionProps } from '../../utils/SectionProps';
 import Input from '../elements/Input';
+import Button from '../elements/Button';
 
 const propTypes = {
   ...SectionProps.types,
@@ -25,6 +26,26 @@ const Cta = ({
   split,
   ...props
 }) => {
+  
+  const [email, setEmail] = useState('');
+  const [submitActive, setSubmitActive] = useState(false);
+
+  const sendEmail = async (e) => {
+    // prevent page load
+    e.preventDefault();
+    {/* https://community.bearer.sh/pushtogsheet/*/}
+    const spreadsheetId = '15RW7f9c4y-A-h9x28FEwWVysKDLUnY7lUGd-g2hvy0A'
+    const baseUrl = "https://pushtogsheet.herokuapp.com";
+    const query = `valueInputOption=RAW&pizzly_pkey=pope8Qy8qfYyppnHRMgLMpQ8MuEUKDGeyhfGCj`;
+    const url = new URL(`/proxy/google-sheets/spreadsheets/${spreadsheetId}/values/A1:append?${query}`, baseUrl);
+    const data = [[email]];
+
+    fetch(url.href, {
+      method: "POST",
+      body: JSON.stringify({ values: data }),
+      headers: { 'Pizzly-Auth-Id': 'eeabbcd0-c9fe-11ea-9a92-d7fa3fa06bce' }
+    });
+  }
 
   const outerClasses = classNames(
     'cta section center-content-mobile reveal-from-bottom',
@@ -56,12 +77,34 @@ const Cta = ({
               We'd love to hear from you
               </h3>
           </div>
-          <div className="cta-action">
-            <Input id="newsletter" type="email" label="Subscribe" labelHidden hasIcon="right" placeholder="Your best email">
-              <svg width="16" height="12" xmlns="http://www.w3.org/2000/svg">
-                <path d="M9 5H1c-.6 0-1 .4-1 1s.4 1 1 1h8v5l7-6-7-6v5z" fill="#376DF9" />
-              </svg>
+          <div className="cta-action" style={{}}>
+            <Input 
+              id="newsletter" 
+              type="email" 
+              label="Subscribe"
+              value={email}
+              labelHidden 
+              hasIcon="right"
+              placeholder="Your best email"
+              onChange={(e) => {
+                setEmail(e.target.value);
+                setSubmitActive(true);
+              }}
+            >
             </Input>
+            { submitActive &&
+              <Button
+                style={{width: "100%", marginTop: 10}}
+                onClick={(e) => {
+                  sendEmail(e).then(() => {
+                    setEmail('Thanks!');
+                    setSubmitActive(false);
+                  });
+                }}
+              >
+                Submit
+              </Button>
+            }
           </div>
         </div>
       </div>

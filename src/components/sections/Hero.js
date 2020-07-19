@@ -66,10 +66,9 @@ const Hero = ({
             </h1>
             <div className="container-xs">
               <p className="m-0 mb-32 reveal-from-bottom" data-reveal-delay="400">
-                Shared living can be tough. From bugging your housemates for rent, to working out who paid what after a night out.
-                We think shared living should be easy - that's why we made inHouse.
+                Shared living can be tough. From bugging your housemates for rent to working out who paid what after a night out, we think shared living should be easy - that's why we made inHouse.
               </p>
-              <div className="reveal-from-bottom" data-reveal-delay="600" >
+              <div className="reveal-from-bottom" data-reveal-delay="600">
                 <ButtonGroup>
                   <a href="https://apps.apple.com/gb/app/inhouse/id1488409238?mt=8">
                     <Image
