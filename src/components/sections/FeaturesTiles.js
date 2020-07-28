@@ -125,6 +125,11 @@ const FeaturesTiles = ({
             </div>
 
           </div>
+          <div class="center-content">
+            <a href="https://www.producthunt.com/posts/inhouse-2?utm_source=badge-featured&utm_medium=badge&utm_souce=badge-inhouse-2" target="_blank">
+              <img src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=223951&theme=dark" alt="inHouse - House sharing made easy | Product Hunt Embed" style={{width: "250px", height: "54px"}} width="250px" height="54px" />
+            </a>
+          </div>
         </div>
       </div>
     </section>
